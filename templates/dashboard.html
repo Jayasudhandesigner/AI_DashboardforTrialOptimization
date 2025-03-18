@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pfizer Trial Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Pfizer Clinical Trial Dashboard</h1>
+    <div id="graph1"></div>
+    <div id="graph2"></div>
+    <div id="graph3"></div>
+    <script>
+        var graph1 = {{ graph1 | safe }};
+        var graph2 = {{ graph2 | safe }};
+        var graph3 = {{ graph3 | safe }};
+        Plotly.newPlot('graph1', graph1.data, graph1.layout);
+        Plotly.newPlot('graph2', graph2.data, graph2.layout);
+        Plotly.newPlot('graph3', graph3.data, graph3.layout);
+    </script>
+</body>
+</html>
